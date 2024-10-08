@@ -1,1 +1,9 @@
+This file is intended to help with sqlserver performance problem solving.
+I will write few details on quick performance approaches
 
+1) Check Server hardware and sql configuration
+2) When checking queries, check the tables itself, what type of table is it (row/column store, matirialized view etc)
+3) Check indices on the table, if they are match to the query and if you need to add / delete some
+4) Validate the data you have, verify that have time in the table (if needed and possible), relation between table and more
+5) When checking query performance, check the following : check indices, check the join condition to other tables, check if there is usage of window functions and if you can avoid it
+6) Try to minimize and filter data as much as you can, inspire to create ctes and filter the most data that you can. 
